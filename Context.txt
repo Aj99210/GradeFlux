@@ -1,0 +1,321 @@
+Below is a detailed and structured context for **GradeFlux**, an AI-powered teacher assistant designed to automate grading and provide personalized feedback. This includes all project knowledge, how it works, the technologies used, folder structure, and everything needed to make it work. Let's dive in!
+
+---
+
+## GradeFlux Context
+
+### Project Overview
+**GradeFlux** is an innovative tool built to simplify grading for teachers by automating the process and delivering personalized feedback to students. Initially focused on multiple-choice questions (MCQs), it integrates seamlessly with Google Classroom to streamline workflows and save time.
+
+- **Purpose**: Automate grading of assignments and provide tailored feedback to students, reducing teacher workload.
+- **Target Users**: Teachers in schools, coaching centers, and colleges who use Google Classroom.
+- **Key Benefits**:
+  - Saves time on repetitive grading tasks.
+  - Offers students actionable, personalized feedback.
+  - Provides visual analytics and insights into class performance.
+  - Features a modern, responsive UI for a seamless user experience.
+  - Leverages Google's infrastructure for scalability and ease of use.
+
+---
+
+### How It Works
+GradeFlux follows a clear, step-by-step workflow to ensure teachers can grade efficiently and students receive meaningful feedback.
+
+#### Workflow Overview
+1. **Teacher Authentication**: Teachers log in using their Google account via OAuth or use the test login option.
+2. **Course Selection**: Teachers pick a course from their Google Classroom or test data.
+3. **Assignment Selection**: Teachers select an assignment to grade from the chosen course.
+4. **Answer Key Setup**: Teachers create or modify the answer key for the selected assignment.
+5. **Automated Grading**: The system grades MCQs by comparing student answers to the answer key, calculates scores, and generates feedback.
+6. **Performance Analytics**: Teachers view statistics and grade distribution for the class.
+7. **Teacher Review**: Teachers review grades and feedback in a dashboard, with the option to edit if needed.
+8. **Sync to Classroom**: Approved grades and feedback are synced back to Google Classroom.
+
+#### Detailed Workflow
+- **Step 1: Authentication**
+  - Teachers log in using Google OAuth.
+  - Alternatively, they can use the test login option to explore the app with mock data.
+  - The system verifies their identity and links to their Google Classroom account.
+- **Step 2: Course Selection**
+  - GradeFlux fetches a list of courses from Google Classroom.
+  - Teachers select one to access its assignments.
+  - Courses are displayed in an attractive card-based layout with hover effects.
+- **Step 3: Assignment Selection**
+  - The system displays all assignments for the selected course.
+  - Teachers choose an assignment to grade.
+  - Assignments show details like due date and submission status.
+- **Step 4: Answer Key Setup**
+  - Teachers create or modify the answer key for the selected assignment.
+  - They can add or remove questions as needed.
+  - The interface provides a clean form for entering correct answers.
+- **Step 5: Automated Grading**
+  - For each student submission:
+    - Parses MCQ answers.
+    - Compares them to the teacher-provided answer key.
+    - Assigns a score (e.g., 8/10).
+    - Generates personalized feedback based on performance.
+- **Step 6: Performance Analytics**
+  - The dashboard displays:
+    - Class average score
+    - Highest and lowest scores
+    - Grade distribution chart
+    - Visual indicators of performance levels
+- **Step 7: Teacher Review**
+  - A dashboard displays student names, scores, and feedback.
+  - Teachers can tweak grades or feedback manually.
+  - Student information includes avatars and late submission indicators.
+- **Step 8: Sync Back**
+  - Once approved, grades and feedback are pushed to Google Classroom using the API.
+  - A success message confirms the sync is complete.
+
+---
+
+### Technologies Used
+GradeFlux is built with a modern, Google-friendly tech stack to ensure reliability, scalability, and a smooth user experience.
+
+- **Backend**: 
+  - **Google App Engine (Python)**: Hosts the backend logic, handles API calls, and processes grading.
+  - **Flask**: Lightweight web framework for the API endpoints.
+- **Frontend**: 
+  - **React.js**: Powers a fast, interactive user interface.
+  - **React Router**: Manages navigation between different views.
+  - **CSS3**: Custom styling with variables, animations, and responsive design.
+  - **Firebase Hosting**: Serves the frontend efficiently.
+- **Authentication**: 
+  - **Google OAuth**: Secures teacher login with Google accounts.
+  - **Test Login Option**: Allows exploring the app without Google authentication.
+- **Integration**: 
+  - **Google Classroom API**: Connects to Classroom for fetching assignments/submissions and syncing grades.
+- **Database**: 
+  - **Firebase Firestore**: Stores temporary data like assignment details and grading results.
+- **Optional UI**: 
+  - **Spline**: Adds 3D elements to the UI (e.g., interactive assignment selection or feedback animations).
+- **Styling & Interactivity**: 
+  - **Custom CSS**: Extensive styling with animations, transitions, and responsive design.
+  - **SVG Icons**: Custom icons for improved visual communication.
+
+---
+
+### UI/UX Features
+GradeFlux features a modern, responsive UI with numerous enhancements for a superior user experience:
+
+#### Overall Design System
+- **Consistent Color Scheme**: Professional blue-based palette with semantic accent colors
+- **CSS Variables**: Centralized design tokens for colors, spacing, shadows, etc.
+- **Typography**: Clean, readable font hierarchy with appropriate sizing and weights
+- **Card-Based Layout**: Elevated content cards with subtle shadows and hover effects
+- **Utility Classes**: Reusable CSS classes for common styling needs
+
+#### Login Page
+- **Professional Logo**: Custom logo with animation effects
+- **Welcoming Card**: Clean login card with subtle gradient accent
+- **OAuth Integration**: Google login button with fallback test login option
+- **Feature Highlights**: Visual indicators of key app features
+- **Animated Elements**: Subtle animations to enhance engagement
+
+#### Course Selection
+- **Card Grid**: Visually appealing course cards with hover effects
+- **Visual Hierarchy**: Clear headings and consistent spacing
+- **Interactive Elements**: Buttons with hover and active states
+- **Toggle Options**: Switch between different view modes
+- **Mock Data Support**: Easy access to test data for exploration
+
+#### Assignment Selection
+- **Breadcrumb Navigation**: Clear path back to course selection
+- **Detailed Cards**: Assignment cards with title, description, and metadata
+- **Visual Indicators**: Icons and badges to show assignment status
+- **Hover Effects**: Interactive elements with smooth transitions
+- **Empty States**: Friendly messages when no assignments are available
+
+#### Dashboard
+- **Answer Key Section**: Clean form for creating and editing the answer key
+- **Grading Statistics**: Visual display of class performance metrics
+- **Grade Distribution**: Bar chart showing the distribution of grades
+- **Student Submissions**: Table with student information, scores, and editable feedback
+- **Visual Score Indicators**: Color-coded score displays based on performance levels
+- **Sync Controls**: Clear buttons for syncing grades back to Google Classroom
+- **Success States**: Confirmation messages for completed actions
+
+#### Responsive Design
+- **Mobile-Friendly Layout**: Adapts to different screen sizes
+- **Flexible Grids**: Responsive card layouts that reflow on smaller screens
+- **Touch-Friendly Controls**: Appropriately sized buttons and inputs for touch devices
+- **Consistent Experience**: Core functionality preserved across all devices
+
+#### Interactive Elements
+- **Hover States**: Visual feedback on interactive elements
+- **Loading Animations**: Spinners and skeleton screens during data fetching
+- **Transitions**: Smooth transitions between states and pages
+- **Feedback Messages**: Clear error and success messages
+- **Tooltips**: Additional information on hover for complex features
+
+---
+
+### Folder Structure
+A well-organized folder structure keeps the project manageable and scalable. Here's how GradeFlux is structured:
+
+```
+gradeflux/
+├── backend/                    # Backend logic (Google App Engine)
+│   ├── app.yaml                # Configuration for App Engine
+│   ├── main.py                 # Entry point for backend logic
+│   ├── requirements.txt        # Python dependencies (e.g., Flask, google-auth)
+│   ├── grading/                # Grading-related code
+│   │   └── mcq_grader.py       # Functions for MCQ grading
+│   └── integrations/           # External API integrations
+│       └── classroom_api.py    # Google Classroom API handlers
+├── frontend/                   # React.js frontend
+│   ├── public/                 # Static assets (e.g., index.html)
+│   ├── src/                    # Source code for React app
+│   │   ├── components/         # Reusable UI components
+│   │   │   ├── Login.js        # Google OAuth login component
+│   │   │   ├── Login.css       # Styles for login component
+│   │   │   ├── AssignmentSelector.js  # Assignment selection UI
+│   │   │   ├── AssignmentSelector.css # Styles for assignment selector
+│   │   │   ├── Dashboard.js    # Teacher review dashboard
+│   │   │   └── Dashboard.css   # Styles for dashboard
+│   │   ├── services/           # API call utilities
+│   │   │   └── api.js          # Functions to call backend APIs
+│   │   ├── App.js              # Main React app component
+│   │   ├── App.css             # Global styles and variables
+│   │   ├── index.js            # Entry point for React app
+│   │   └── index.css           # Base styles and utilities
+│   ├── package.json            # Frontend dependencies (e.g., React, axios)
+│   └── spline/                 # Optional Spline 3D assets
+├── firebase.json               # Firebase Hosting configuration
+└── README.md                   # Project documentation and setup instructions
+```
+
+- **backend/**: Contains all server-side code, including grading logic and API integrations.
+- **frontend/**: Houses the React.js app, with components for login, assignment selection, and the dashboard.
+- **spline/**: Optional directory for Spline 3D assets to enhance the UI.
+
+---
+
+### Key Implementations
+Here's how the core features come to life:
+
+#### 1. Teacher Authentication
+- **Frontend**: Use Google Sign-In button (via `@react-oauth/google`).
+- **Test Login**: Alternative option for exploring with mock data.
+- **Backend**: Verify OAuth token and store teacher ID in Firestore.
+
+#### 2. Course Selection
+- Display courses in a responsive grid layout with hover effects.
+- Each course card shows the title, description, and visual indicators.
+- Toggle between list view and optional 3D view.
+
+#### 3. Assignment Selection
+- Fetch assignments for the selected course.
+- Display in a card-based layout with details like due date.
+- Include breadcrumb navigation back to course selection.
+
+#### 4. Answer Key Management
+- Form interface for creating and editing the answer key.
+- Add and remove questions dynamically.
+- Validate input to ensure a complete answer key.
+
+#### 5. Automated Grading
+- **Backend Function** (in `mcq_grader.py`):
+  ```python
+  def grade_mcq(student_answers, answer_key):
+      score = sum(1 for s, k in zip(student_answers, answer_key) if s == k)
+      total = len(answer_key)
+      percentage = (score/total) * 100
+      
+      # Generate personalized feedback based on performance
+      if percentage >= 90:
+          feedback = "Excellent work! You've mastered this material."
+      elif percentage >= 80:
+          feedback = "Great job! You have a solid understanding of the concepts."
+      elif percentage >= 70:
+          feedback = "Good work! Review the questions you missed to improve further."
+      elif percentage >= 60:
+          feedback = "You're on the right track. Focus on reviewing the concepts you missed."
+      else:
+          feedback = "Let's work on improving your understanding. Review the material and try again."
+          
+      return {"score": f"{score}/{total}", "feedback": feedback}
+  ```
+- Input: Student answers and the answer key.
+- Output: Score and personalized feedback.
+
+#### 6. Performance Analytics
+- Calculate class average, highest, and lowest scores.
+- Generate grade distribution across A-F ranges.
+- Display statistics in visually appealing cards and charts.
+
+#### 7. Teacher Dashboard
+- Build `Dashboard.js` with sections for:
+  - Answer key management
+  - Grading statistics and visualizations
+  - Student submissions table with:
+    - Student avatars and names
+    - Late submission indicators
+    - Color-coded score displays
+    - Editable feedback fields
+  - Sync controls for pushing grades to Google Classroom
+
+#### 8. Syncing Back to Classroom
+- Use `studentSubmissions.patch` to update grades and feedback in Google Classroom.
+- Display success confirmation after syncing.
+- Handle errors with user-friendly messages.
+
+---
+
+### Enhancing the UI with Spline (Optional)
+To make GradeFlux visually engaging:
+- **Course Selection**: Replace the grid with a 3D bookshelf (each book is a course).
+- **Assignment Selection**: Create a 3D desk with assignment papers.
+- **Dashboard**: Include a 3D animated character to present feedback.
+
+#### Spline Integration
+- Design scenes in Spline's web editor.
+- Export as React components.
+- Import into the appropriate component files.
+- Add toggle to switch between 2D and 3D views.
+
+---
+
+### Test Mode Features
+GradeFlux includes a comprehensive test mode that allows users to explore all features without setting up Google authentication:
+
+- **Test Login**: Skip Google OAuth and use mock user data.
+- **Mock Courses**: Pre-populated course list for selection.
+- **Mock Assignments**: Sample assignments with descriptions and due dates.
+- **Mock Submissions**: Simulated student submissions for grading.
+- **Toggle Control**: Switch between mock data and real API in the dashboard.
+
+---
+
+### Responsive Design Implementation
+GradeFlux is fully responsive across all device sizes:
+
+- **Mobile View** (< 576px):
+  - Stacked layouts
+  - Simplified headers
+  - Full-width cards
+  - Optimized table views
+
+- **Tablet View** (576px - 768px):
+  - Two-column grids
+  - Adjusted padding and margins
+  - Responsive tables with horizontal scrolling
+
+- **Desktop View** (> 768px):
+  - Multi-column grids
+  - Expanded layouts
+  - Full feature visibility
+
+---
+
+### Summary
+- **Project**: GradeFlux
+- **Goal**: Automate MCQ grading and feedback for Google Classroom users.
+- **Features**: OAuth login, course/assignment selection, answer key management, automated grading, performance analytics, review dashboard, Classroom sync.
+- **Tech**: Google App Engine (Python), React.js, Firebase, Google Classroom API, Firestore, Spline (optional).
+- **Structure**: Clean backend/frontend split with modular components.
+- **UI/UX**: Modern, responsive design with animations, transitions, and visual feedback.
+- **Workflow**: Login → Select course → Select assignment → Set answer key → Grade → Review → Sync.
+
+This context provides everything you need to understand and work with GradeFlux—from the big picture to the technical details. The application combines powerful functionality with an intuitive, visually appealing interface to create a seamless experience for teachers.
