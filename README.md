@@ -16,13 +16,13 @@ GradeFlux is an AI-powered teacher assistant designed to automate grading and pr
 ## 🖥️ Screenshots
 
 ### Login Screen
-![Login Screen](https://via.placeholder.com/800x400/f5f7fa/4a6cf7?text=Login+Screen)
+![Login Screen](https://ibb.co/BVDMR6Yf)
 
 ### Course Selection
-![Course Selection](https://via.placeholder.com/800x400/f5f7fa/4a6cf7?text=Course+Selection)
+![Course Selection](https://ibb.co/MKs5Y6p)
 
 ### Grading Dashboard
-![Grading Dashboard](https://via.placeholder.com/800x400/f5f7fa/4a6cf7?text=Grading+Dashboard)
+![Grading Dashboard](https://ibb.co/60XpjPFs)
 
 ## 🛠️ Technologies Used
 
